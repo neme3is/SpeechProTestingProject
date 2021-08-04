@@ -200,14 +200,14 @@ public class CalcTestClass {
         Assert.assertEquals(appOutput, result);
     }
 
-    @Test (dataProvider = "testCase10")
+    @Test (dataProvider = "testCase10", groups = {"zeroDivisionCheck"})
     public void zeroDividend (String result, String input) throws IOException {
         stdinWriter(input);
         String appOutput = reader.readLine();
         Assert.assertEquals(appOutput, result);
     }
 
-    @Test (dataProvider = "testCase11")
+    @Test (dataProvider = "testCase11", groups = {"zeroDivisionCheck"})
     public void zeroDivisor (String result, String input) throws IOException {
         stdinWriter(input);
         String appOutput = reader.readLine();
