@@ -20,7 +20,7 @@ public class CalcTestClass {
     @BeforeMethod
     public void preparationMethod() throws IOException {
         Process process =  new ProcessBuilder(PROJECT_PATH
-                + "\\src\\main\\resources\\calc_div.exe").start();
+                + "\\src\\test\\resources\\calc_div.exe").start();
         stdin = process.getOutputStream();
         stdout = process.getInputStream();
         reader = new BufferedReader (new InputStreamReader(stdout));
